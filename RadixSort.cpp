@@ -1,3 +1,10 @@
+//  Laba 3. Radix sort
+//  Worst-case : Theta(n)
+//  Best-case  : Theta(n)
+
+//  In fuctions byConsole(),  byFile(), byRandom() there are only ways of inputing data
+//  In fuction anyWay() there is preparing the array(and the user) to start the sort
+
 #include <iostream>
 #include <cmath>
 #include <fstream>
@@ -13,7 +20,7 @@ int sdvig = 0; //сортировка идет по положительным �
                //числа, находим самое мин из них, записываем модуль числа и затем прибавляем это к
                //каждому элементу. сортируем и из каждого элемента вычитаем это число.
 
-int digit(int number, int index, int k)                                                //возвращает и-тый разряд числа
+int digit(int number, int index, int k)                                         //возвращает и-тый разряд числа
 {
     int dig = 0;
     for (int i = 0; i < index; i++)
@@ -24,7 +31,7 @@ int digit(int number, int index, int k)                                         
     return dig;
 }
 
-int lengthy(int* massive, int length, int k)											//находит самое длинное число и возвращает количество разрядов
+int lengthy(int* massive, int length, int k)									//находит самое длинное число и возвращает количество разрядов
 {
     int max = massive[0];
     for (int i = 1; i < length; i++)
